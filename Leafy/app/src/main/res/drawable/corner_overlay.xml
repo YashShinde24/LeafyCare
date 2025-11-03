@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White background with transparent corners -->
+    <solid android:color="#80FFFFFF"/>
+    <corners android:radius="32dp" />  <!-- Adjust radius for the transparency curve -->
+</shape>

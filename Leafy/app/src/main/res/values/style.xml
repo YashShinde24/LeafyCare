@@ -1,0 +1,20 @@
+<resources>
+    <!--  Base application theme.  -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--  Customize your theme here.  -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary</item>
+        <item name="colorAccent">@color/primary_variant_light</item>
+    </style>
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <style name="TransparentDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

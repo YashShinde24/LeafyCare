@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/scientific_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Scientific Name:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scientific_name_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Hibiscus rosa-sinensis"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scientific_name_label"
+        app:layout_constraintTop_toTopOf="@id/scientific_name_label" />
+
+    <TextView
+        android:id="@+id/genus_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Genus:"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scientific_name_value" />
+
+    <TextView
+        android:id="@+id/genus_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Hibiscus"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/genus_label"
+        app:layout_constraintTop_toTopOf="@id/genus_label" />
+
+    <TextView
+        android:id="@+id/family_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Family:"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genus_value" />
+
+    <TextView
+        android:id="@+id/family_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Malvaceae"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/family_label"
+        app:layout_constraintTop_toTopOf="@id/family_label" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/family_value">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/info_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Information"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/expand_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="@string/expand"
+                    android:src="@drawable/ic_expand_more" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/additional_info_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="This plant is native to tropical regions. It has been cultivated for centuries and has many varieties. The flowers are often used in traditional medicine."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

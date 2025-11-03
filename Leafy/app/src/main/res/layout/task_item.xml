@@ -1,0 +1,140 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+    app:contentPadding="10dp"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- Date and Day Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tue"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:alpha="0.5"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/taskTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nov"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/black"
+                    android:alpha="0.5"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <!-- Separator -->
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:alpha="0.2" />
+
+            <!-- Task Details Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/taskTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Title"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/black"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/taskDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Task Description"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:alpha="0.8"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Edit and Delete Icons Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/editIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_edit"
+                    android:contentDescription="Edit Icon"
+                    android:layout_marginEnd="16dp"
+                    app:tint="@android:color/black" />
+
+                <ImageView
+                    android:id="@+id/deleteIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_baseline_delete"
+                    android:contentDescription="Delete Icon"
+                    app:tint="@android:color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Remaining Time -->
+        <TextView
+            android:id="@+id/remainingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2h 30m remaining"
+            android:textSize="12sp"
+            android:textColor="@color/colorAccent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

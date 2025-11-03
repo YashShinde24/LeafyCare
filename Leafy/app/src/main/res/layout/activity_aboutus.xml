@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e6f0d8">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_green"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:src="@drawable/all_back_button"
+            android:padding="8dp"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About Us"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Logo -->
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/app_logo"
+                android:contentDescription="Logo" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LeafyCare: Your Personal Plant  \n
+                       Companion"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center" />
+
+
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keep your plants thriving with LeafyCare — your all-in-one companion for plant care, watering reminders, disease detection, garden management, and more."
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#888888"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp" />
+
+
+            <!-- Version and Team -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version: 1.0.0"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="#888888"
+                android:gravity="center"
+                android:layout_marginTop="10dp" />
+
+            <!-- Contact Us Button -->
+            <Button
+                android:id="@+id/contactUsButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CONTACT US"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_bold"
+                android:backgroundTint="#EEEEEE"
+                android:textColor="#000000" />
+
+            <!-- Follow Us -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Follow Us On"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:layout_marginTop="25dp" />
+
+            <!-- Social Icons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/facebookImageView"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/facebook"
+                    android:layout_marginHorizontal="10dp"
+                    android:contentDescription="Facebook" />
+
+                <ImageView
+                    android:id="@+id/instagramImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/instagram"
+                    android:layout_marginHorizontal="10dp"
+                    android:contentDescription="Instagram" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

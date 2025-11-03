@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EFE1"
+    tools:context=".Search">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/all_back_button"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/plant_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/loading"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/plant_image"
+            android:scaleType="centerCrop" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:elevation="20dp"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/plant_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Plant Name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/sun_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/sunlight"
+                    android:src="@drawable/ic_sun"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/plant_name_text_view"
+                    app:tint="#254420" />
+
+                <TextView
+                    android:id="@+id/light_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Light"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/sun_icon"
+                    app:layout_constraintTop_toTopOf="@id/sun_icon" />
+
+                <TextView
+                    android:id="@+id/sunlight_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Normal"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/sun_icon"
+                    app:layout_constraintTop_toBottomOf="@id/light_label" />
+
+                <ImageView
+                    android:id="@+id/water_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/watering"
+                    android:src="@drawable/ic_water"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sun_icon"
+                    app:tint="#254420" />
+
+                <TextView
+                    android:id="@+id/water_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Water"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/water_icon"
+                    app:layout_constraintTop_toTopOf="@id/water_icon" />
+
+                <TextView
+                    android:id="@+id/watering_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="100ml"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/water_icon"
+                    app:layout_constraintTop_toBottomOf="@id/water_label" />
+
+                <ImageView
+                    android:id="@+id/soil_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/soil"
+                    android:src="@drawable/ic_soil"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/water_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/soil_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Soil"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/soil_icon"
+                    app:layout_constraintTop_toTopOf="@id/soil_icon" />
+
+                <TextView
+                    android:id="@+id/soil_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Well-draining"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/soil_icon"
+                    app:layout_constraintTop_toBottomOf="@id/soil_label" />
+
+                <ImageView
+                    android:id="@+id/growth_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/growth"
+                    android:src="@drawable/ic_growth"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/soil_icon"
+                    app:tint="#254420" />
+
+                <TextView
+                    android:id="@+id/growth_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Growth"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/growth_icon"
+                    app:layout_constraintTop_toTopOf="@id/growth_icon" />
+
+                <TextView
+                    android:id="@+id/growth_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Moderate"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/growth_icon"
+                    app:layout_constraintTop_toBottomOf="@id/growth_label" />
+
+                <ImageView
+                    android:id="@+id/fertilizing_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="24dp"
+                    android:contentDescription="@string/fertilizing"
+                    android:src="@drawable/ic_fertilizer"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/growth_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/fertilizing_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Fertilization"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/fertilizing_icon"
+                    app:layout_constraintTop_toTopOf="@id/fertilizing_icon" />
+
+                <TextView
+                    android:id="@+id/fertilizing_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="Monthly"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/fertilizing_icon"
+                    app:layout_constraintTop_toBottomOf="@id/fertilizing_label" />
+
+                <Button
+                    android:id="@+id/set_reminder_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
+                    android:text="Set Reminder"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fertilizing_value" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

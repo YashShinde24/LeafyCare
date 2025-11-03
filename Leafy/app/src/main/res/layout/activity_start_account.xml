@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6f0d8 ">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/backArrow"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/all_back_button"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ok, last step!"
+            android:textColor="#1B5E20"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue with one of the options below"
+            android:textColor="#4E6E4E"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_top_nature_green"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Google Sign-in -->
+        <LinearLayout
+            android:id="@+id/googlebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_background"
+            android:padding="12dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/googleLogo"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_google"
+                android:contentDescription="Google Logo"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/btnGoogleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continue with Google"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textColor="#1B5E20"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:fontFamily="@font/poppins_medium"
+            android:background="@drawable/rounded_green_button"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Log in"
+            android:background="@drawable/rounded_green_button"
+            android:backgroundTint="#1B5E20"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

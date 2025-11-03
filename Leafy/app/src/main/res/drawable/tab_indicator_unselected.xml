@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/inactive_dot"/> <!-- Define your inactive dot color -->
+    <corners android:radius="50dp"/> <!-- Make it circular -->
+    <size android:width="4dp" android:height="4dp"/> <!-- Adjust size as necessary -->
+    <padding
+        android:left="4dp"
+        android:right="4dp" />  <!-- Add padding to simulate margin between dots -->
+</shape>

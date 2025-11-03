@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background"
+    >
+    <!-- White Transparent Overlay -->
+
+    <View
+        android:id="@+id/white_overlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4CFFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/circle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/circle_shape"
+        app:layout_constraintBottom_toBottomOf="@id/appname"
+        app:layout_constraintEnd_toEndOf="@id/appname"
+        app:layout_constraintStart_toStartOf="@id/appname"
+        app:layout_constraintTop_toTopOf="@id/appname" />
+
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="LeafyCare"
+        android:layout_centerVertical="true"
+        android:textColor="@color/primary"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Your Smart Green Companion"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appname" />
+
+
+    <Button
+        android:id="@+id/getstartedbutton"
+        android:layout_width="327dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/button_on_splashscreen"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tagline" />
+
+    <TextView
+        android:id="@+id/signintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:textIsSelectable="false"
+        android:text="@string/signin_text"
+        app:layout_constraintTop_toBottomOf="@id/getstartedbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

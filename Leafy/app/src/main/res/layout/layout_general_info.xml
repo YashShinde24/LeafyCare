@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/sun_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/sunlight"
+        android:src="@drawable/ic_sun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/light_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Light"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/sun_icon"
+        app:layout_constraintTop_toTopOf="@id/sun_icon" />
+
+    <TextView
+        android:id="@+id/sunlight_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Normal"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/sun_icon"
+        app:layout_constraintTop_toBottomOf="@id/light_label" />
+
+    <ImageView
+        android:id="@+id/water_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/watering"
+        android:src="@drawable/ic_water"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sun_icon"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/water_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Water"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/water_icon"
+        app:layout_constraintTop_toTopOf="@id/water_icon" />
+
+    <TextView
+        android:id="@+id/watering_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="100ml"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/water_icon"
+        app:layout_constraintTop_toBottomOf="@id/water_label" />
+
+    <ImageView
+        android:id="@+id/soil_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/soil"
+        android:src="@drawable/ic_soil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/water_icon"
+         />
+
+    <TextView
+        android:id="@+id/soil_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Soil"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
+
+        app:layout_constraintStart_toEndOf="@id/soil_icon"
+        app:layout_constraintTop_toTopOf="@id/soil_icon" />
+
+    <TextView
+        android:id="@+id/soil_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Well-draining"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/soil_icon"
+        app:layout_constraintTop_toBottomOf="@id/soil_label" />
+
+    <ImageView
+        android:id="@+id/growth_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/growth"
+        android:src="@drawable/ic_growth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soil_icon"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/growth_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Growth"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/growth_icon"
+        app:layout_constraintTop_toTopOf="@id/growth_icon" />
+
+    <TextView
+        android:id="@+id/growth_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Moderate"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/growth_icon"
+        app:layout_constraintTop_toBottomOf="@id/growth_label" />
+
+    <ImageView
+        android:id="@+id/fertilizing_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/fertilizing"
+        android:src="@drawable/ic_fertilizer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/growth_icon"/>
+
+    <TextView
+        android:id="@+id/fertilizing_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Fertilization"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/fertilizing_icon"
+        app:layout_constraintTop_toTopOf="@id/fertilizing_icon" />
+
+    <TextView
+        android:id="@+id/fertilizing_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:text="Monthly"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/fertilizing_icon"
+        app:layout_constraintTop_toBottomOf="@id/fertilizing_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

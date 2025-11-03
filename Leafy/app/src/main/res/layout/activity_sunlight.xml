@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#e6f0d8">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingBottom="8dp"
+        android:text="Light Meter"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measure the light level for your plants"
+        android:textSize="15sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="#757575"
+        android:paddingBottom="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:progressDrawable="@drawable/progress_gradient"
+        android:max="10000"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/lightLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 LUX"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="12dp" />
+
+    <!-- Light Level Guide TextView -->
+    <TextView
+        android:id="@+id/lightInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Light Level Guide:\n0–500 LUX: Low\n500–2500 LUX: Medium\n2500–10000 LUX: High"
+        android:textSize="16sp"
+        android:textColor="#1B5E20"
+        android:fontFamily="@font/poppins_medium"
+        android:shadowColor="#000000"
+        android:paddingBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/startMeasurement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Start Measurement"
+        android:background="@drawable/rounded_green_button"
+        android:layout_gravity="center"
+        android:padding="12dp" />
+
+</LinearLayout>

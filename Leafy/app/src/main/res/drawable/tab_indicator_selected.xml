@@ -1,0 +1,9 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="8dp"/>
+    <solid android:color="@color/active_dot"/>
+    <size android:width="8dp" android:height="2dp"/>
+    <padding
+        android:left="4dp"
+        android:right="4dp"/>  <!-- Adding padding to create space between dots -->
+</shape>

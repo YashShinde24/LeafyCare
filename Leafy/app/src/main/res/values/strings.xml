@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">LeafyCare</string>
+    <string name="bg_img">Background Image</string>
+    <string name="OpenDrawer">Open navigation drawer</string>
+    <string name="CloseDrawer">Close navigation drawer</string>
+    <string name="appname">LeafyCare</string>
+    <string name="tagline">Plant Care Application</string>
+    <string name="button_on_splashscreen">Get Started With LeafyCare</string>
+    <string name="signintxt">
+<![CDATA[ Already a member? Sign in here -> ]]>
+</string>
+    <string name="todo">TODO</string>
+    <string name="description">Description</string>
+    <string name="light">Light</string>
+    <string name="water">Water</string>
+    <string name="height">Height</string>
+    <string name="humidity">Humidity</string>
+    <string name="water_desc">Watering instructions</string>
+    <string name="sun_desc">Sunlight requirements</string>
+    <string name="image_desc">Plant image description</string>
+    <string name="back_button">Back</string>
+    <string name="potted_plants_indoor">Potted plants indoor</string>
+    <string name="potted_plants_outdoor">Potted plants outdoor</string>
+    <string name="garden_plants_in_ground">Garden, plants in ground</string>
+    <string name="back">Back</string>
+    <string name="you_can_pick_multiple_options">You can pick multiple options</string>
+    <string name="where_are_your_plants">Where are your plants?</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="what_can_we_help_you_with">What can we help you with?</string>
+    <string name="get_water_and_care_reminders">Get water and care reminders</string>
+    <string name="get_help_with_a_sick_plant">Get help with a sick plant</string>
+    <string name="identify_a_plant">Identify a plant</string>
+    <string name="plant_organization_amp_journal">
+<![CDATA[ Plant organization & journal ]]>
+</string>
+    <string name="something_else">Something else</string>
+    <string name="ent_num">"Enter your mobile number"</string>
+    <string name="otp">"We will send OTP on the provided number."</string>
+    <string name="ind_num">"+91"</string>
+    <string name="hint1">"8767884965"</string>
+    <string name="signup_text">SignUp</string>
+    <string name="create_account">Create account</string>
+    <string name="ent_det">Enter your details below to cretate your account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="generate_otp">generate otp</string>
+    <string name="app_title">LeafyCare</string>
+    <string name="app_slogan">Plant health care application</string>
+    <string name="get_started">get started with LeafyCare\n</string>
+    <string name="sign_in_text">
+<![CDATA[ Already have an account Click here>> ]]>
+</string>
+    <!--  TODO: Remove or change this placeholder text  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_task">New Task\n</string>
+    <string name="save">Save\n</string>
+
+    <string name="no_cardetails">Click on the button below to begin creating your reminder!</string>
+    <string name="title_activity_add_reminder">Add Reminder</string>
+    <string name="title_activity_edit_reminder">Edit Reminder</string>
+    <string name="title_activity_licenses">Licenses</string>
+    <string name="add_reminder">Reminder</string>
+    <string name="details">Details</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="repeat">Repeat</string>
+    <string name="repeat_off">Off</string>
+    <string name="repeat_no">Repetition Interval </string>
+    <string name="repeat_type">Type of Repetitions</string>
+    <string name="action_discard_reminder">Discard Reminder</string>
+    <string name="action_save_reminder">Save Reminder</string>
+    <string name="editor_activity_title_new_reminder">Add Reminder Details</string>
+    <string name="editor_activity_title_edit_reminder">Edit Reminder</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="delete_dialog_msg">Delete this Reminder?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="editor_delete_reminder_successful">Reminder deleted</string>
+    <string name="editor_delete_reminder_failed">Error with deleting reminder</string>
+    <string name="editor_insert_reminder_successful">Reminder saved</string>
+    <string name="editor_insert_reminder_failed">Error with saving reminder</string>
+    <string name="editor_update_reminder_successful">Reminder updated</string>
+    <string name="editor_update_reminder_failed">Error with updating reminder</string>
+    <string name="reminder_title">AlarmReminder</string>
+    <string name="no_reminder">No Remainder\n</string>
+
+    <string name="time_passed">Time passed</string>
+    <string name="task_due">Task due!</string>
+    <string name="time_remaining">%1$dh %2$dm remaining</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="delete_task">Delete Task</string>
+    <string name="text1">Fill your information below or\nregister with your social account</string>
+    <string name="text2">We missed you! Login to continue\nyour journey with us.</string>
+
+    <string name="signin_text">Already a member? <font color='#1E88E5'>Sign in here</font></string>
+
+
+
+
+    <string name="search_plants">Search Plants</string>
+    <string name="plant_image">Plant Image</string>
+    <string name="growth">Growth</string>
+    <string name="soil">Soil</string>
+    <string name="sunlight">Sunlight</string>
+    <string name="watering">Watering</string>
+    <string name="fertilizing">Fertilization Type</string>
+    <string name="general_info">General Info</string>
+    <string name="care">Care</string>
+    <string name="scientific_info">Scientific Info</string>
+    <string name="pruning">Pruning</string>
+    <string name="expand">Expand</string>
+    <string name="add_to_garden">Add to Garden</string>
+    <string name="already_in_garden">Already in Garden</string>
+    <string name="plant_added_to_garden">%1$s added to your garden</string>
+    <string name="remove_from_garden">Remove</string>
+    <string name="empty_garden_message">Your garden is empty.\nAdd plants from the plant details screen.</string>
+    <string name="set_reminder">Set Reminder</string>
+    <string name="remove_reminder">Remove Reminder</string>
+    <string name="set_watering_reminder">Set Watering Reminder</string>
+    <string name="recommended_schedule">Recommended Schedule</string>
+    <string name="recommended_days">Every %d days (based on plant needs)</string>
+    <string name="custom_reminder">Custom Reminder</string>
+    <string name="days_value">%d days</string>
+    <string name="reminder_set_for">Reminder set for %s</string>
+    <string name="plant_removed_from_garden">%1$s removed from your garden</string>
+    <string name="reminder_set_success">Reminder set for %1$s in %2$d days</string>
+    <string name="reminder_removed">Reminder removed for %1$s</string>
+    <string name="search_hint">Type to search...</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<!-- res/layout/dialog_loading.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/roundedbg">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        style="?android:attr/progressBarStyleLarge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Analyzing..."
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

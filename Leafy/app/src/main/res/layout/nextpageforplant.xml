@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EFE1">
+
+    <ImageButton
+        android:id="@+id/ibtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back"
+        android:src="@drawable/all_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/cardView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/image_desc"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/plantn" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="364dp"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/showtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Plant Name"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/description"
+                    android:fontFamily="@font/poppins_medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/showtext"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/textarea"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:hint="This is a read-only text area"
+                    android:padding="8dp"
+                    android:scrollbars="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/clock"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/descriptionText"
+                    app:layout_constraintVertical_bias="0.044" />
+
+                <ImageView
+                    android:id="@+id/sun"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/sun_desc"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textarea"
+                    app:srcCompat="@drawable/plantsinfo_sun" />
+
+                <TextView
+                    android:id="@+id/lightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/light"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/sun"
+                    app:layout_constraintTop_toTopOf="@id/sun" />
+
+                <ImageView
+                    android:id="@+id/water"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="132dp"
+                    android:contentDescription="@string/water_desc"
+                    app:layout_constraintStart_toEndOf="@+id/lightText"
+                    app:layout_constraintTop_toTopOf="@id/sun"
+                    app:srcCompat="@drawable/plantsinfo_water"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/waterText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/water"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.261"
+                    app:layout_constraintStart_toEndOf="@id/water"
+                    app:layout_constraintTop_toTopOf="@id/water" />
+
+                <ImageView
+                    android:id="@+id/humidity"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/humidity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/sun"
+                    app:srcCompat="@drawable/plantsinfo_temperature" />
+
+                <TextView
+                    android:id="@+id/humidityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:text="@string/humidity"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/humidity"
+                    app:layout_constraintTop_toTopOf="@id/humidity" />
+
+                <ImageView
+                    android:id="@+id/height"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="112dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/height"
+                    app:layout_constraintStart_toEndOf="@+id/humidityText"
+                    app:layout_constraintTop_toBottomOf="@+id/water"
+                    app:srcCompat="@drawable/plantsinfo_scale"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/heightText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="40dp"
+                    android:text="@string/height"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.323"
+                    app:layout_constraintStart_toEndOf="@id/height"
+                    app:layout_constraintTop_toBottomOf="@+id/waterText"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/all_button_shape"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Set Remainder"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="28dp"
+                    android:background="@drawable/all_button_shape"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Save Plant"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/sunn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="108dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Normal"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/humidityText"
+                    app:layout_constraintEnd_toStartOf="@+id/water"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/sun"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/wa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="000ml"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/heightText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/water"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/humi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="104dp"
+                    android:text="None%"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/height"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/humidity"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/hei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="104dp"
+                    android:text="Small"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/height" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/roundedbg">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:background="@drawable/handle_bar_bg"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"/>
+    <TextView
+        android:id="@+id/bottomSheetTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/bottomSheetDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Detailed description..."
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:textColor="#555555" />
+</LinearLayout>

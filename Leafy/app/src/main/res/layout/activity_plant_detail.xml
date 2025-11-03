@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EFE1"
+    tools:context=".PlantDetailActivity">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back"
+        android:src="@drawable/all_back_button"
+        app:tint="@android:color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/plant_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/card_view"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="Plant image"
+            android:scaleType="centerCrop" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:elevation="20dp"
+            app:cardCornerRadius="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/plant_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Plant Name"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/plant_name_text_view"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabTextColor="@android:color/darker_gray">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_height="wrap_content"
+                        android:text="@string/general_info" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/care" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scientific_info" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <ViewFlipper
+                    android:id="@+id/view_flipper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tab_layout">
+
+                    <!-- General Info Layout -->
+                    <include
+                        android:id="@+id/general_info_layout"
+                        layout="@layout/layout_general_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- Care Layout -->
+                    <include
+                        android:id="@+id/care_layout"
+                        layout="@layout/layout_care"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <!-- Scientific Info Layout -->
+                    <include
+                        android:id="@+id/scientific_info_layout"
+                        layout="@layout/layout_scientific_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </ViewFlipper>
+
+                <Button
+                    android:id="@+id/add_to_garden_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="24dp"
+                    android:background="@drawable/all_button_shape"
+                    android:paddingEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/add_to_garden"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_flipper" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</FrameLayout>

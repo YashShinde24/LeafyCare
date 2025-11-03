@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/questionome_house"
+        android:title="Home"/>
+    <item
+        android:id="@+id/my_plants"
+        android:icon="@drawable/navbar_leaf"
+        android:title="My Plants"/>
+    <item
+        android:id="@+id/disease"
+        android:icon="@drawable/questiontwo_meds"
+        android:title="Health"/>
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/questiontwo_search"
+        android:title="Search"/>
+    <item
+        android:id="@+id/acc"
+        android:icon="@drawable/user1"
+        android:title="Account"/>
+</menu>

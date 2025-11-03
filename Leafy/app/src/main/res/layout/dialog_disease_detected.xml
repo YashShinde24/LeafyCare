@@ -1,0 +1,58 @@
+<!-- res/layout/dialog_disease_detected.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/roundedbg"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:layout_margin="20dp">
+
+    <!-- Disease Icon -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_disease_detected"
+        android:layout_gravity="center"
+        android:contentDescription="Disease Detected Icon"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disease Detected!"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginBottom="8dp"
+        android:gravity="center" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We've identified a disease in your plant. Here's more information."
+        android:textColor="#555555"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Button -->
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Show Details"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/water_icon_care"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/watering"
+        android:src="@drawable/ic_water"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#2196F3" />
+
+    <TextView
+        android:id="@+id/water_label_care"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Watering Tips"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/water_icon_care"
+        app:layout_constraintTop_toTopOf="@id/water_icon_care" />
+
+    <TextView
+        android:id="@+id/watering_value_care"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Water thoroughly when the top inch of soil is dry. Avoid overwatering."
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/water_label_care" />
+
+    <ImageView
+        android:id="@+id/soil_icon_care"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/soil"
+        android:src="@drawable/ic_soil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/watering_value_care"
+        app:tint="#795548" />
+
+    <TextView
+        android:id="@+id/soil_label_care"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Soil Tips"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/soil_icon_care"
+        app:layout_constraintTop_toTopOf="@id/soil_icon_care" />
+
+    <TextView
+        android:id="@+id/soil_value_care"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Use well-draining soil with organic matter. Repot every 2-3 years."
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soil_label_care" />
+
+    <ImageView
+        android:id="@+id/pruning_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/pruning"
+        android:src="@drawable/ic_pruning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/soil_value_care"
+        app:tint="#4CAF50" />
+
+    <TextView
+        android:id="@+id/pruning_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Pruning Tips"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/pruning_icon"
+        app:layout_constraintTop_toTopOf="@id/pruning_icon" />
+
+    <TextView
+        android:id="@+id/pruning_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginEnd="8dp"
+        android:text="Prune in early spring to maintain shape. Remove dead or yellowing leaves."
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pruning_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

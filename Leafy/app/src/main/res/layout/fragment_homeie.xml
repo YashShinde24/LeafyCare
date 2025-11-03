@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#e6f0d8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/good"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#2d4c2d"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your plants are so glad you are here. It's Plant care time!"
+            android:textColor="#2d4c2d"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_location_shape"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#2d4c2d"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/home_cloud"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="#2d4c2d"
+                    android:textSize="16sp"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_location_shape"
+            android:padding="16dp"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add your first plant"
+                    android:textColor="#2d4c2d"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LeafyCare will then create a care schedule for it to make sure it thrives."
+                    android:textColor="#2d4c2d"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/addPlantButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add plant"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:background="@drawable/all_button_shape"
+            android:padding="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#204f24"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="4dp" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/toolsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:columnCount="2">
+
+            <!-- Tool 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/garden"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/garden" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Garden"
+                        android:textColor="#2d4c2d"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tool 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/diagnose"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/disgnose" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plant Diagnose"
+                        android:textColor="#2d4c2d"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tool 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/remainder"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/water1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water Remainder"
+                        android:textColor="#2d4c2d"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="16sp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/lightmeter"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/sun" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Light Meter"
+                        android:textColor="#2d4c2d"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.gridlayout.widget.GridLayout>
+    </LinearLayout>
+</ScrollView>

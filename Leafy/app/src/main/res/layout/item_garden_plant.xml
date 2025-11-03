@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#DDDDDD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="12dp">
+
+        <ImageView
+            android:clipToOutline="true"
+            android:id="@+id/garden_plant_image"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/plant_image"
+            android:background="@drawable/rounded_image"
+            tools:src="@drawable/placeholder_image" />
+
+        <TextView
+            android:id="@+id/garden_plant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#212121"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="Aloe Vera" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_sun"
+                android:contentDescription="@string/sunlight"
+                app:tint="#FFC107" />
+
+            <TextView
+                android:id="@+id/garden_plant_sunlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#555555"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Bright indirect light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_water"
+                android:contentDescription="@string/watering"
+                app:tint="#2196F3" />
+
+            <TextView
+                android:id="@+id/garden_plant_watering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="#555555"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:fontFamily="@font/poppins_regular"
+                android:ellipsize="end"
+                tools:text="7 days" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/reminder_status_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#4CAF50"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:fontFamily="@font/poppins_regular"
+            tools:text="Reminder set for 05/15/2023"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/remove_plant_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/remove_from_garden"
+            android:textColor="#F44336"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/set_reminder_button"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/set_reminder"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@android:color/white"
+            android:background="@drawable/all_button_shape"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
