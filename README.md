@@ -75,8 +75,6 @@ The core of LeafyCare is a **Convolutional Neural Network (CNN)** optimized for 
 
 
 
-[Image of a convolutional neural network architecture for image classification]
-
 
 ---
 
