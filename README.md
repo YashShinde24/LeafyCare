@@ -1,7 +1,6 @@
 # LeafyCare 🌿
 Smart plant health monitoring and disease detection for Android.
 
-[Optional badges: build / license / version / downloads — add as needed]
 
 ---
 
