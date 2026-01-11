@@ -1,105 +1,140 @@
-# 🌿 LeafyCare: Smart Plant Health Monitoring & Disease Detection
+# LeafyCare 🌿
+Smart plant health monitoring and disease detection for Android.
 
-LeafyCare is an Android application designed to automatically identify plant diseases and provide structured, actionable care recommendations. By integrating **Machine Learning** and, local data management, LeafyCare empowers farmers, gardeners, and students with expert-level botanical insights in the palm of their hand.
-
-Check out our Android App -  
----
-
-## 📌 Table of Contents
-* [Introduction](#-introduction)
-* [Problem Statement](#-problem-statement)
-* [Proposed Solution](#-proposed-solution)
-* [Features](#-features)
-* [System Architecture](#-system-architecture)
-* [Technology Stack](#-technology-stack)
-* [Machine Learning Model](#-machine-learning-model)
-* [Installation & Setup](#installation--setup)
-* [Application Workflow](#-application-workflow)
-* [Future Enhancements](#-future-enhancements)
+[Optional badges: build / license / version / downloads — add as needed]
 
 ---
 
-## 📖 Introduction
-Plant diseases pose a significant threat to global food security and local biodiversity. Traditional diagnosis relies on expert knowledge, which is often expensive or inaccessible. **LeafyCare** bridges this gap using AI-based image recognition to detect diseases early and provide verified maintenance guidelines through a user-friendly mobile interface.
-
-## ⚠️ Problem Statement
-- **Expert Dependency:** Diagnosis often requires specialists who aren't always available.
-- **Fragmented Data:** Reliable plant care info is scattered across various unverified sources.
-- **Manual Errors:** Visual identification by non-experts is prone to high error rates.
-- **Barrier to Entry:** Beginners lack the tools to monitor plant health effectively.
-
-## ✅ Proposed Solution
-LeafyCare offers a comprehensive health monitoring system that:
-1. **Identifies** diseases using Convolutional Neural Networks (CNN).
-2. **Maps** predictions to structured care data (Soil, Sunlight, Water).
-3. **Retrieves** real-time verified data via external Plant APIs.
-4. **Simplifies** the user experience through a clean, native Android UI.
-
----
-
-## 🚀 Features
-- **AI-Based Detection:** TensorFlow-powered classification of thousands of labeled plant images.
-- **Detailed Care Guides:** Access growth patterns, soil requirements, and maintenance schedules.
-- **Smart Search:** Case-insensitive search optimized for performance (triggers after 3 characters).
-- **Secure Authentication:** Integrated login system with local SQLite support.
-- **External API Integration:** Real-time fetching of botanical data to ensure accuracy.
+## Table of Contents
+- [Overview](#overview)
+- [Problem](#problem)
+- [Solution](#solution)
+- [Key Features](#key-features)
+- [System Architecture](#system-architecture)
+- [Technology Stack](#technology-stack)
+- [Machine Learning Model](#machine-learning-model)
+  - [Model Performance](#model-performance)
+- [Screenshots](#screenshots)
+- [Installation & Setup](#installation--setup)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## 🏗 System Architecture
-The application utilizes a **Modular Layered Architecture**:
+## Overview
+LeafyCare is an Android application that automatically identifies plant diseases from leaf images and provides actionable care recommendations. The app combines on-device machine learning with curated plant care data and external plant information APIs to deliver accurate, accessible insights to gardeners and growers.
 
-1. **UI Layer:** Android Activities/Fragments for user interaction.
-2. **ML Inference Layer:** TensorFlow Lite for on-device image processing.
-3. **Data Management Layer:** SQLite for local storage and session management.
-4. **API Layer:** Interface for external plant information services.
+## Problem
+- Dependence on experts for diagnosis, which can be expensive or unavailable.
+- Fragmented care information scattered across many unverified sources.
+- Manual visual diagnosis by non-experts is error-prone.
+- New gardeners lack easy-to-use tools for monitoring plant health.
 
+## Solution
+LeafyCare provides:
+1. On-device disease identification using a compact Convolutional Neural Network (CNN) via TensorFlow Lite.
+2. Structured care instructions (soil, watering, sunlight) mapped to predicted disease and plant species.
+3. Optional real-time enrichment from authoritative external plant APIs.
+4. A clean native Android UI for effortless use.
 
+## Key Features
+- AI-driven disease classification (TensorFlow Lite).
+- Detailed, structured care guides for affected plants.
+- Fast, case-insensitive search (starts after 3 characters).
+- Local authentication and session management (SQLite).
+- External API integration for verified botanical data.
 
----
+## System Architecture
+Layered architecture for separation of concerns:
+1. UI Layer — Activities and Fragments.
+2. ML Inference Layer — TensorFlow Lite model and preprocessing pipeline.
+3. Data Management Layer — SQLite for local storage and caching.
+4. API Layer — Interfaces to external plant data services (optional).
 
-## 🛠 Technology Stack
-* **Platform:** Android
-* **Language:** Java
-* **IDE:** Android Studio
-* **Database:** SQLite
-* **Machine Learning:** TensorFlow / TensorFlow Lite
-* **Architecture:** Layered Architecture
+## Technology Stack
+- Platform: Android
+- Language: Java
+- IDE: Android Studio
+- Database: SQLite
+- Machine Learning: TensorFlow / TensorFlow Lite
+- Architecture: Layered modular design
 
----
+## Machine Learning Model
+The app uses a CNN optimized for mobile inference. It extracts color, texture and lesion features to classify leaf images into disease categories.
 
-## 🧠 Machine Learning Model
-The core of LeafyCare is a **Convolutional Neural Network (CNN)** optimized for mobile performance.
-- **Dataset:** Thousands of leaf images across multiple species and disease categories.
-- **Feature Extraction:** Focuses on color variations, texture, and lesion patterns.
-- **On-Device Inference:** Designed to work offline for immediate classification.
+- Dataset: thousands of labeled images across species and disease classes.
+- Inference: on-device using a TensorFlow Lite model for fast and private predictions.
+- Model file: place your `.tflite` model in the app assets (see Installation & Setup).
 
+### Model Performance
+Include:
+- Training & validation curves (accuracy / loss).
+- Confusion matrix(s) for the final model (per-class performance).
+- Key metrics: accuracy, precision, recall, F1-score (per class and macro/micro averages).
 
+(See the **Screenshots** section below for where to add these images in the repo and how to reference them in this README.)
 
+## Screenshots
+Add app screenshots here to demonstrate the UI and the core flows:
+- Home / Dashboard
+- Image capture or upload screen
+- Prediction result (disease + care recommendations)
+- History or saved sessions
 
----
+To embed images in the README, use relative paths (example):
+```md
+![Home screen](docs/images/screenshot-home.png)
+![Prediction result](docs/images/screenshot-prediction.png)
+```
+Store images in `docs/images/` (recommended) or `assets/docs/images/`. Use descriptive filenames and include alt text.
 
-Installation & Setup
-Prerequisites
-Android Studio (latest)
-Android SDK
-Java JDK 8+
-Physical device or emulator (recommended API level specified in project)
-Clone the repository
+## Installation & Setup
+
+### Prerequisites
+- Android Studio (latest)
+- Android SDK
+- Java JDK 8+
+- Physical device or emulator (recommended API level specified in project)
+
+### Clone the repository
+```bash
 git clone https://github.com/YashShinde24/LeafyCare.git
 cd LeafyCare
-Add the ML model
-Place your TensorFlow Lite model in:
+```
 
+### Add the ML model
+Place your TensorFlow Lite model in:
+```
 app/src/main/assets/model.tflite
+```
 (or whichever assets path your project uses)
 
-Build & Run
-Open the project in Android Studio.
-Let Gradle sync and install required SDKs.
-Build and run on a device or emulator.
 
-### Steps
-1. **Clone the repo:**
-   ```bash
-   git clone [https://github.com/yourusername/LeafyCare.git](https://github.com/yourusername/LeafyCare.git)
+
+### Build & Run
+1. Open the project in Android Studio.
+2. Let Gradle sync and install required SDKs.
+3. Build and run on a device or emulator.
+
+
+
+## Contributing
+Contributions are welcome. Please:
+- Open an issue describing the change or feature.
+- Fork the repo and create a feature branch.
+- Add tests for significant changes.
+- Submit a pull request with a clear description.
+
+## License
+Specify your license here (e.g., MIT). Replace this line with a LICENSE file and a short summary.
+
+## Contact
+Maintainer: Yash Shinde — link to GitHub profile or email.
+
+---
+
+## Appendix: What to include in the repo for better documentation
+- `docs/images/` — UI screenshots, training curves, confusion matrices
+- `docs/model/` — training logs, model card, model quantization notes
+- `docs/report.md` — short explanation of dataset, preprocessing, and metrics
