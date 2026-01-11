@@ -72,7 +72,7 @@ Accuracy:
 - Confusion matrix(s) for the final model (per-class performance).
 - Key metrics: accuracy, precision, recall, F1-score (per class and macro/micro averages).
 
-(See the **Screenshots** section below for where to add these images in the repo and how to reference them in this README.)
+![Confusion Matrix](Screenshots/Confusion%20matrix/confusion_matrix.png)
 
 ## Screenshots
 Add app screenshots here to demonstrate the UI and the core flows:
