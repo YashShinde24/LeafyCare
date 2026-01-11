@@ -13,7 +13,7 @@ Check out our Android App -
 * [System Architecture](#-system-architecture)
 * [Technology Stack](#-technology-stack)
 * [Machine Learning Model](#-machine-learning-model)
-- [Installation & Setup](#installation--setup)
+* [Installation & Setup](#installation--setup)
 * [Application Workflow](#-application-workflow)
 * [Future Enhancements](#-future-enhancements)
 
