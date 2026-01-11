@@ -1,4 +1,4 @@
-# LeafyCare 🌿
+<img width="684" height="293" alt="image" src="https://github.com/user-attachments/assets/31ad979c-7c79-45c4-a69d-9a3e98c62cb9" /># LeafyCare 🌿
 Smart plant health monitoring and disease detection for Android.
 
 
