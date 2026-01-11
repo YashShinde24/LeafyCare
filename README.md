@@ -68,8 +68,8 @@ The app uses a CNN optimized for mobile inference. It extracts color, texture an
 - Model file: place your `.tflite` model in the app assets (see Installation & Setup).
 
 ### Model Performance
-Include:
-- Training & validation curves (accuracy / loss).
+Accuracy:
+- The model achieved an accuracy of 86.3% on the training dataset and 83.7% on the testing dataset, indicating good generalization performance with minimal overfitting.
 - Confusion matrix(s) for the final model (per-class performance).
 - Key metrics: accuracy, precision, recall, F1-score (per class and macro/micro averages).
 
