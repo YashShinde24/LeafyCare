@@ -13,7 +13,7 @@ Check out our Android App -
 * [System Architecture](#-system-architecture)
 * [Technology Stack](#-technology-stack)
 * [Machine Learning Model](#-machine-learning-model)
-* [Installation and Setup](#-installation-and-setup)
+- [Installation & Setup](#installation--setup)
 * [Application Workflow](#-application-workflow)
 * [Future Enhancements](#-future-enhancements)
 
@@ -79,11 +79,25 @@ The core of LeafyCare is a **Convolutional Neural Network (CNN)** optimized for 
 
 ---
 
-## ⚙️ Installation and Setup
-### Prerequisites
-- Android Studio (Latest Version)
-- Android SDK & Java JDK 8+
-- Physical Android device or Emulator
+Installation & Setup
+Prerequisites
+Android Studio (latest)
+Android SDK
+Java JDK 8+
+Physical device or emulator (recommended API level specified in project)
+Clone the repository
+git clone https://github.com/YashShinde24/LeafyCare.git
+cd LeafyCare
+Add the ML model
+Place your TensorFlow Lite model in:
+
+app/src/main/assets/model.tflite
+(or whichever assets path your project uses)
+
+Build & Run
+Open the project in Android Studio.
+Let Gradle sync and install required SDKs.
+Build and run on a device or emulator.
 
 ### Steps
 1. **Clone the repo:**
