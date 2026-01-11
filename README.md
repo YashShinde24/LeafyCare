@@ -1,6 +1,6 @@
 # 🌿 LeafyCare: Smart Plant Health Monitoring & Disease Detection
 
-LeafyCare is an AI-driven Android application designed to automatically identify plant diseases and provide structured, actionable care recommendations. By integrating **Machine Learning**, local data management, and external **Plant APIs**, LeafyCare empowers farmers, gardeners, and students with expert-level botanical insights in the palm of their hand.
+LeafyCare is an Android application designed to automatically identify plant diseases and provide structured, actionable care recommendations. By integrating **Machine Learning** and, local data management, LeafyCare empowers farmers, gardeners, and students with expert-level botanical insights in the palm of their hand.
 
 ---
 
